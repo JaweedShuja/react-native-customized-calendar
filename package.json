@@ -1,0 +1,37 @@
+{
+  "name": "react-native-customized-calendar",
+  "version": "1.0.0",
+  "description": "React Native Component for Calendar for Customized Usage",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JaweedShuja/react-native-customized-calendar.git"
+  },
+  "keywords": [
+    "react-native",
+    "react-component",
+    "react-native-component",
+    "react",
+    "react",
+    "native",
+    "mobile",
+    "ios",
+    "android",
+    "ui",
+    "calendar",
+    "customized",
+    "calender"
+  ],
+  "author": "Jaweed Shuja Uddin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JaweedShuja/react-native-customized-calendar/issues"
+  },
+  "homepage": "https://github.com/JaweedShuja/react-native-customized-calendar#readme",
+  "devDependencies": {
+    "metro-react-native-babel-preset": "^0.76.3"
+  }
+}
