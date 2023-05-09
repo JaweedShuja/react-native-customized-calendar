@@ -16,22 +16,19 @@ const Calender = ({
     dateTextColor = 'black',
     currentDateTextColor = 'white',
     showCurrentDate = true,
-    weekendBackgroundColor = 'rgba(24, 41, 84,0.1)',
+    weekendBackgroundColor = 'gray',
     weekdaysBackgroundColor = 'white',
     emptyDaysBackgroundColor = 'lightgray',
     monthButtonTextColor = 'white',
     monthNameTextColor = 'black',
-    backgroundIconTintColor = 'gray',
-
+    backForwardIconTintColor = 'gray',
     plusMinusButtonContainerBackgroundColor = 'whitesmoke',
     plusMinusButtonContainerBorderColor = 'lightgray',
     plusMinusIconTintColor = 'gray',
     yearColor = 'black',
     yearSelectTextColor = 'black',
-
     selectButtonBackgroundColor = 'whitesmoke',
     selectButtonBorderColor = 'lightgray',
-
     containerStyle={},
     calenderItemContainerBorderColor = 'lightgray',
 }) => {
@@ -134,7 +131,7 @@ const Calender = ({
                             <Image
                                 resizeMode='contain'
                                 source={require('../images/backIcon.png')}
-                                style={[styles.backFronIconContainer,{tintColor:backgroundIconTintColor}]}
+                                style={[styles.backFronIconContainer,{tintColor:backForwardIconTintColor}]}
                             />
                         </TouchableOpacity>
                         :
@@ -168,7 +165,7 @@ const Calender = ({
                             <Image
                                 resizeMode='contain'
                                 source={require('../images/forwardIcon.png')}
-                                style={[styles.backFronIconContainer,{tintColor:backgroundIconTintColor}]}
+                                style={[styles.backFronIconContainer,{tintColor:backForwardIconTintColor}]}
                             />
                         </TouchableOpacity>
                         :
