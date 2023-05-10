@@ -5,7 +5,7 @@ A React-Native calendar component to show a calendar. This calendar is fully cus
 * Navigate to different date, month and year
 * Handle date with custom onPress function
 
-Calender View             |  Year Selction
+Calender View             |  Year Selection
 :-------------------------:|:-------------------------:
 <img width="348" alt="Screenshot 2023-05-09 at 5 37 39 PM" src="https://github.com/JamzWork/CustomComponents/assets/132579206/05523d75-6ed6-4f1a-8d2e-41a4b3dd5dc1">| <img width="342" alt="Screenshot 2023-05-09 at 5 57 48 PM" src="https://github.com/JamzWork/ProductsListing/assets/132579206/7ee4caf0-ee94-4a11-bc6f-cb4179490e0c">
 
