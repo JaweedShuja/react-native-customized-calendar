@@ -31,6 +31,8 @@ const Calender = ({
     selectButtonBorderColor = 'lightgray',
     containerStyle={},
     calenderItemContainerBorderColor = 'lightgray',
+    reminders = [],
+    reminderDateColor = 'white'
 }) => {
     const [monthArr, setMonthArr] = useState([[], [], [], [], [], []])
     const [days, setDays] = useState(['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'])
@@ -63,7 +65,14 @@ const Calender = ({
         setMonthArr(MyMonthArray(month, currentYear))
     }
 
-    const getColor = (value, index) => {
+    const getCellBackgroundColor = (value, index) => {
+        if(reminders.length != 0){
+            for(let i = 0; i < reminders.length; i++){
+                if(reminders[i].date == value){
+                    return reminders[i].color
+                }   
+            }
+        }
         if (showCurrentDate && isCurrentDay(value)) {
             return primaryColor
         }
@@ -79,6 +88,20 @@ const Calender = ({
             }
         }
     }
+    const getCellTextColor = (value) => {
+        if(reminders.length != 0){
+            for(let i = 0; i < reminders.length; i++){
+                if(reminders[i].date == value){
+                    return reminderDateColor
+                }   
+            }
+        }
+        if(showCurrentDate && isCurrentDay(value)){
+            return currentDateTextColor
+        }else{
+            return dateTextColor
+        }
+    } 
     const isCurrentDay = (value) => {
         if (currentYear == d.getFullYear() && currentMonthIndex == d.getMonth() && value == d.getDate()) {
             return true
@@ -104,14 +127,18 @@ const Calender = ({
                 style={styles.dayContainer}>
                 {monthArr[index].map((value, index) => {
                     return <TouchableOpacity
-                        onPress={() => onPressDay()}
-                        key={index.toString()}
-                        style={[styles.calenderBoxItem, {
-                            backgroundColor: getColor(value, index),
-                            borderColor:calenderItemContainerBorderColor
-                        }]}>
-                        {value == -1 ? null : <Text style={{ color: showCurrentDate && isCurrentDay(value) ? currentDateTextColor : dateTextColor, paddingVertical: 8, fontSize:fontSize }}>{value}</Text>}
-                    </TouchableOpacity>
+                    onPress={() => onPressDay()}
+                    key={index.toString()}
+                    style={[styles.calenderBoxItem, {
+                        backgroundColor: getCellBackgroundColor(value, index),
+                        borderColor:calenderItemContainerBorderColor
+                    }]}>
+                    {value == -1 ? null : <Text style={{ 
+                        color: getCellTextColor(value), 
+                        paddingVertical: 8, 
+                        fontSize:fontSize 
+                    }}>{value}</Text>}
+                </TouchableOpacity>
                 })}
             </View>
         );

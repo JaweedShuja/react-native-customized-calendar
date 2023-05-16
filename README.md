@@ -4,10 +4,17 @@
 A React-Native calendar component to show a calendar. This calendar is fully customized, you can modify it as per your need.
 * Navigate to different date, month and year
 * Handle date with custom onPress function
+* Add reminders with custom colors
 
 Calender View             |  Year Selection
 :-------------------------:|:-------------------------:
 <img width="348" alt="Screenshot 2023-05-09 at 5 37 39 PM" src="https://github.com/JamzWork/CustomComponents/assets/132579206/05523d75-6ed6-4f1a-8d2e-41a4b3dd5dc1">| <img width="342" alt="Screenshot 2023-05-09 at 5 57 48 PM" src="https://github.com/JamzWork/ProductsListing/assets/132579206/7ee4caf0-ee94-4a11-bc6f-cb4179490e0c">
+
+Calender View With Reminder             |
+:-------------------------:
+<img width="349" alt="Screenshot 2023-05-16 at 3 29 36 PM" src="https://github.com/JaweedShuja/react-native-customized-calendar/assets/132579206/6b1e329e-d75c-4cb4-92d2-3c408c30074d">
+
+
 
 ## Installation
 
@@ -38,6 +45,20 @@ Simply place a `<Calender />` tag for showing calendar.
     </View>
 ```
 
+For reminders pass  `reminders` props as array
+
+```
+<View style={{ flex:1, }}>
+        <Calender 
+            reminders = [
+                {date:2, color:"#40E0D0"},
+                {date:11, color:"#FFBF00"},
+                {date:14, color:"#9FE2BF"}
+            ]
+        />
+    </View>
+```
+
 
 ## Documentation
 
@@ -65,6 +86,8 @@ Simply place a `<Calender />` tag for showing calendar.
 | selectButtonBorderColor                 | Year select button border color                                               | lightgray  | String  |
 | containerStyle                          | Container style for additional styling                                        | {}         | Object  |
 | calenderItemContainerBorderColor        | Calender cell border color                                                    | lightgray  | String  |
+| reminders                               | Set reminders on calender with different colors                               | []         | Array   |
+| reminderDateColor                       | Date text of reminders date                                                   | white      | String  |
 
 ## Contributing
 Pull requests are always welcome! Feel free to open a new GitHub issue for any changes that can be made.

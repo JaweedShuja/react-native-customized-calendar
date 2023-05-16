@@ -1,6 +1,6 @@
 {
   "name": "react-native-customized-calendar",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "React Native Component for Calendar for Customized Usage",
   "main": "index.js",
   "scripts": {
